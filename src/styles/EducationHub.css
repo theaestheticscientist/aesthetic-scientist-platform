@@ -1,0 +1,154 @@
+.education-hub {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd4 100%);
+  padding: 40px 20px;
+}
+
+.hub-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hub-header h1 {
+  font-size: 36px;
+  color: #1F4E78;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.hub-header p {
+  font-size: 16px;
+  color: #8a8a7a;
+}
+
+.hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.module-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #f0ede8;
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.module-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #d4af8f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.module-card h3 {
+  font-size: 18px;
+  color: #1F4E78;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.module-card p {
+  font-size: 14px;
+  color: #8a8a7a;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.read-btn {
+  background: #2c3e3f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.read-btn:hover {
+  background: #1F4E78;
+}
+
+.module-detail {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #d4af8f;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.back-btn:hover {
+  color: #1F4E78;
+}
+
+.module-detail h2 {
+  font-size: 32px;
+  color: #1F4E78;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+}
+
+.module-content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.module-content p {
+  margin-bottom: 16px;
+}
+
+.module-content strong {
+  color: #1F4E78;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hub-header h1 {
+    font-size: 28px;
+  }
+
+  .module-detail {
+    padding: 24px;
+  }
+
+  .module-detail h2 {
+    font-size: 24px;
+  }
+}

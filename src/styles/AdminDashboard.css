@@ -1,0 +1,143 @@
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f1ed;
+}
+
+.dashboard-nav {
+  width: 250px;
+  background: #2c3e3f;
+  color: white;
+  padding: 30px 20px;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.dashboard-nav h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #d4af8f;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  text-align: left;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(212, 175, 143, 0.1);
+  color: #d4af8f;
+}
+
+.nav-btn.active {
+  background: #d4af8f;
+  color: #2c3e3f;
+  font-weight: 600;
+}
+
+.nav-btn.logout-btn {
+  margin-top: auto;
+  color: #ff6b6b;
+}
+
+.nav-btn.logout-btn:hover {
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.dashboard-content {
+  margin-left: 250px;
+  padding: 40px;
+  width: calc(100% - 250px);
+}
+
+.dashboard-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #1F4E78;
+  margin-bottom: 10px;
+}
+
+.dashboard-content > p {
+  color: #8a8a7a;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.dashboard-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0ede8;
+}
+
+.dashboard-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #1F4E78;
+  margin-bottom: 15px;
+}
+
+.dashboard-section p {
+  color: #8a8a7a;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    flex-direction: column;
+  }
+
+  .dashboard-nav {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .dashboard-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-content h1 {
+    font-size: 24px;
+  }
+}
