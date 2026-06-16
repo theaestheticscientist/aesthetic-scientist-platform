@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { educationModules } from '../data/educationModules';
+import { ModuleDiagram } from '../components/ModuleDiagrams';
 import '../styles/EducationHub.css';
 
 export default function EducationHub() {
@@ -22,9 +23,24 @@ export default function EducationHub() {
               ← Back to Modules
             </button>
             <h2>{selectedModule.title}</h2>
+            
+            <div className="module-diagram-container">
+              <ModuleDiagram moduleId={selectedModule.id} />
+            </div>
+            
             <div className="module-content">
-              {selectedModule.content.split('\n').map((paragraph, idx) => (
-                <p key={idx}>{paragraph}</p>
+              {selectedModule.sections.map((section, idx) => (
+                <section key={idx} className="content-section">
+                  <h3>{section.title}</h3>
+                  {section.content && <p>{section.content}</p>}
+                  {section.bullets && (
+                    <ul className="content-bullets">
+                      {section.bullets.map((bullet, bulletIdx) => (
+                        <li key={bulletIdx}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
               ))}
             </div>
           </div>
